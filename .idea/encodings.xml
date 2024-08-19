@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/athletetrack-data/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/athletetrack-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/athletetrack-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/athletetrack-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/athletetrack-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/athletetrack-web/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/athletetrack-web/src/main/resources" charset="UTF-8" />
   </component>

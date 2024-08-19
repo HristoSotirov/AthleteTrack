@@ -9,8 +9,16 @@
         <module name="athletetrack-security" />
         <module name="athletetrack-web" />
         <module name="athletetrack-data" />
-        <module name="athletetrack-core" />
+        <module name="athletetrack-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="athletetrack-core" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="athletetrack-data" options="" />
+    </option>
   </component>
 </project>

@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AthleteTrack.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/athletetrack-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/athletetrack-data/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/athletetrack-security/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/athletetrack-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Admin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Athlete.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Coach.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Workout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/WorkoutType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Enum" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,21 +52,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.AthleteTrackServer.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.UserController.executor": "Run",
+    "Application.UserRepository.executor": "Run",
+    "Application.UserService.executor": "Run",
+    "JUnit.UserDAOTest.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/authentication",
-    "onboarding.tips.debug.path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-security/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java",
+    "onboarding.tips.debug.path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hristo\IdeaProjects\AthleteTrack\athletetrack-service\src\main\java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hristo\IdeaProjects\AthleteTrack\athletetrack-service\src\main\java" />
+      <recent name="C:\Users\Hristo\IdeaProjects\AthleteTrack\athletetrack-data\src\main\java" />
       <recent name="C:\Users\Hristo\IdeaProjects\AthleteTrack\src" />
     </key>
   </component>
