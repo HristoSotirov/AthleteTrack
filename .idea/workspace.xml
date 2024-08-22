@@ -4,23 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="server build, user visualization methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Admin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Athlete.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Coach.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/Workout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/com/athletetrack/model/WorkoutType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-core/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/UserType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/entity/UserType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/repository/UserRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/athletetrack-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-security/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/DTO/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/DTO/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/athletetrack-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/web/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/web/HttpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/web/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/web/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Route.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Route.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/HttpUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/HttpUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,28 +62,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AthleteTrackServer.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.UserController.executor": "Run",
-    "Application.UserRepository.executor": "Run",
-    "Application.UserService.executor": "Run",
-    "JUnit.UserDAOTest.executor": "Run",
-    "JUnit.UserRepositoryTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java",
-    "onboarding.tips.debug.path": "C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AthleteTrackServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserRepository.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserService.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserDAOTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Hristo/IdeaProjects/AthleteTrack/athletetrack-service/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hristo\IdeaProjects\AthleteTrack\athletetrack-service\src\main\java" />
@@ -98,7 +110,21 @@
       <option name="presentableId" value="Default" />
       <updated>1723906851800</updated>
     </task>
+    <task id="LOCAL-00001" summary="server build, user visualization methods">
+      <option name="closed" value="true" />
+      <created>1724101004014</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724101004014</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="server build, user visualization methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="server build, user visualization methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

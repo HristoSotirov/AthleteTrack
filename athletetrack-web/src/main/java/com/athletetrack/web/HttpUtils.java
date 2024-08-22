@@ -1,3 +1,4 @@
+// HttpUtils.java
 package com.athletetrack.web;
 
 import java.io.BufferedReader;
@@ -18,6 +19,7 @@ public class HttpUtils {
     public static void sendResponse(OutputStream output, String response) throws IOException {
         synchronized (output) {
             output.write(response.getBytes("UTF-8"));
+            output.flush();
         }
     }
 }

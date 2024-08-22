@@ -6,4 +6,7 @@ module athletetrack.web {
     requires com.fasterxml.jackson.databind;
     requires athletetrack.data;
     requires com.fasterxml.jackson.datatype.jsr310;
+    requires android.json;
+    requires athletetrack.security;
+    requires org.slf4j;
 }

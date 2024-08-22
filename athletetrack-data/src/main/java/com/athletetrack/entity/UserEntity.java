@@ -1,35 +1,81 @@
 package com.athletetrack.entity;
 
+import java.io.Serializable;
 import java.time.Instant;
 
-public class UserEntity {
+
+public class UserEntity implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     private Long id;
+    private String name;
     private String username;
     private String password;
     private String email;
     private String phone;
-    private UserType userType;
+    private UserEntity.UserType userType;
     private Long coachId;
+    private String coachName;
     private String sport;
     private String club;
     private Instant createdAt;
 
-    public UserEntity(){
+    public enum UserType {
+        ADMIN,
+        COACH,
+        ATHLETE;
+    }
+
+    public UserEntity() {
 
     }
 
-    public UserEntity(Long id, String username, String password, String email, String phone, UserType userType, Long coachId, String sport, String club, Instant createdAt) {
+    public UserEntity(Long id, String name, String username, String email, String phone, UserType userType, Long coachId, String coachName, String sport, String club, Instant createdAt) {
         this.id = id;
+        this.name = name;
+        this.username = username;
+        this.email = email;
+        this.phone = phone;
+        this.userType = userType;
+        this.coachId = coachId;
+        this.coachName = coachName;
+        this.sport = sport;
+        this.club = club;
+        this.createdAt = createdAt;
+    }
+
+    // COACH
+    public UserEntity(String name, String username, String password, String email, String phone, UserType userType, String sport, String club) {
+        this.name = name;
         this.username = username;
         this.password = password;
         this.email = email;
         this.phone = phone;
         this.userType = userType;
-        this.coachId = coachId;
         this.sport = sport;
         this.club = club;
-        this.createdAt = createdAt;
+    }
+
+    // ATHLETE
+    public UserEntity(String name, String username, String password, String email, String phone, UserType userType) {
+        this.name = name;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.phone = phone;
+        this.userType = userType;
+    }
+
+    // Login
+    public UserEntity(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    // JWTtoken
+    public UserEntity(Long id, String username) {
+        this.id = id;
+        this.username = username;
     }
 
     public Long getId() {
@@ -38,6 +84,14 @@ public class UserEntity {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getUsername() {
@@ -88,6 +142,14 @@ public class UserEntity {
         this.coachId = coachId;
     }
 
+    public String getCoachName() {
+        return coachName;
+    }
+
+    public void setCoachName(String coachName) {
+        this.coachName = coachName;
+    }
+
     public String getSport() {
         return sport;
     }
@@ -116,15 +178,18 @@ public class UserEntity {
     public String toString() {
         return "UserEntity{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", userType=" + userType +
                 ", coachId=" + coachId +
+                ", coachName='" + coachName + '\'' +
                 ", sport='" + sport + '\'' +
                 ", club='" + club + '\'' +
                 ", createdAt=" + createdAt +
                 '}';
     }
 }
+
