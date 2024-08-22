@@ -1,7 +1,7 @@
 package com.athletetrack.entity;
 
 import java.io.Serializable;
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 
 public class UserEntity implements Serializable {
@@ -18,7 +18,7 @@ public class UserEntity implements Serializable {
     private String coachName;
     private String sport;
     private String club;
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     public enum UserType {
         ADMIN,
@@ -30,7 +30,7 @@ public class UserEntity implements Serializable {
 
     }
 
-    public UserEntity(Long id, String name, String username, String email, String phone, UserType userType, Long coachId, String coachName, String sport, String club, Instant createdAt) {
+    public UserEntity(Long id, String name, String username, String email, String phone, UserType userType, Long coachId, String coachName, String sport, String club, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -166,11 +166,11 @@ public class UserEntity implements Serializable {
         this.club = club;
     }
 
-    public Instant getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Instant createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 

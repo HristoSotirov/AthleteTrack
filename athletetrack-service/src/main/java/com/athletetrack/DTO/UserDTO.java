@@ -1,6 +1,6 @@
 package com.athletetrack.DTO;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 public class UserDTO {
     private Long id;
@@ -14,12 +14,12 @@ public class UserDTO {
     private String coachName;
     private String sport;
     private String club;
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String name, String username, String email, String phone, String userType, Long coachId, String coachName, String sport, String club, Instant createdAt) {
+    public UserDTO(Long id, String name, String username, String email, String phone, String userType, Long coachId, String coachName, String sport, String club, LocalDateTime createdAt) {
         this.id = id;
         this.name = name;
         this.username = username;
@@ -147,11 +147,11 @@ public class UserDTO {
         this.club = club;
     }
 
-    public Instant getCreatedAt() {
+    public LocalDateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Instant createdAt) {
+    public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
 

@@ -24,10 +24,10 @@ public class UserRepository {
                 rs.getString("phone"),
                 userType,
                 coachId,
-                null, // Задаваме временно `null` за coachName
+                null,
                 rs.getString("sport"),
                 rs.getString("club"),
-                rs.getTimestamp("created_at").toInstant()
+                rs.getTimestamp("created_at").toLocalDateTime()
         );
     }
 
@@ -41,7 +41,6 @@ public class UserRepository {
 
             while (rs.next()) {
                 UserEntity user = mapToUserEntity(rs);
-                // Вземаме името на треньора само ако е необходимо
                 if (user.getCoachId() != null) {
                     user.setCoachName(getCoachNameById(conn, user.getCoachId()));
                 }
@@ -86,7 +85,6 @@ public class UserRepository {
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
                     user = mapToUserEntity(rs);
-                    // Вземаме името на треньора само ако е необходимо
                     if (user.getCoachId() != null) {
                         user.setCoachName(getCoachNameById(conn, user.getCoachId()));
                     }

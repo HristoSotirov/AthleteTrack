@@ -1,21 +1,18 @@
-package com.athletetrack.entity;
+package com.athletetrack.DTO;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class WorkoutEntity implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+public class WorkoutDTO {
     private Long id;
     private Long athleteId;
     private String workoutType;
     private String description;
     private LocalDateTime doneAt;
 
-    public WorkoutEntity() {
+    public WorkoutDTO() {
     }
 
-    public WorkoutEntity(Long id, Long athleteId, String workoutType, String description, LocalDateTime doneAt) {
+    public WorkoutDTO(Long id, Long athleteId, String workoutType, String description, LocalDateTime doneAt) {
         this.id = id;
         this.athleteId = athleteId;
         this.workoutType = workoutType;
@@ -24,7 +21,7 @@ public class WorkoutEntity implements Serializable {
     }
 
     // add workout
-    public WorkoutEntity(Long athleteId, String workoutType, String description, LocalDateTime doneAt) {
+    public WorkoutDTO(Long athleteId, String workoutType, String description, LocalDateTime doneAt) {
         this.athleteId = athleteId;
         this.workoutType = workoutType;
         this.description = description;
@@ -73,7 +70,7 @@ public class WorkoutEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "WorkoutEntity{" +
+        return "WorkoutDTO{" +
                 "id=" + id +
                 ", athleteId=" + athleteId +
                 ", workoutType='" + workoutType + '\'' +

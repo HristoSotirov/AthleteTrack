@@ -1,11 +1,18 @@
 package com.athletetrack.router;
 
 import com.athletetrack.controller.UserController;
+import com.athletetrack.controller.WorkoutController;
 import com.athletetrack.repository.UserRepository;
+import com.athletetrack.repository.WorkoutRepository;
 import com.athletetrack.service.UserService;
+import com.athletetrack.service.WorkoutService;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -22,6 +29,10 @@ public class Router {
         UserRepository userRepository = new UserRepository();
         UserService userService = new UserService(userRepository);
         UserController userController = new UserController(userService);
+
+        WorkoutRepository workoutRepository = new WorkoutRepository();
+        WorkoutService workoutService = new WorkoutService(workoutRepository);
+        WorkoutController workoutController = new WorkoutController(workoutService);
 
         registerRoute("GET", "/users", request -> userController.getAllUsers());
 
@@ -68,9 +79,38 @@ public class Router {
 
             return userController.login(username, password);
         });
+
+        registerRoute("GET", "/workoutsAthlete/{athlete_id}", request -> {
+            String athleteId = request.getPathVariables().get("athlete_id");
+            return workoutController.getWorkoutsByUserId(athleteId);
+        });
+
+        registerRoute("GET", "/workoutsCoach/{coach_id}", request -> {
+            String coachId = request.getPathVariables().get("coach_id");
+            return workoutController.getWorkoutsByCoachId(coachId);
+        });
+
+        registerRoute("GET", "/workoutsClub/{clubName}", request -> {
+            String encodedClubName = request.getPathVariables().get("clubName");
+            String clubName = URLDecoder.decode(encodedClubName, StandardCharsets.UTF_8.toString());
+
+            return workoutController.getWorkoutsByClubName(clubName);
+        });
+
+        registerRoute("POST", "/saveWorkout", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            Long athleteId = json.optLong("athleteId", 0L);
+            String workoutType = json.optString("workoutType", null);
+            String description = json.optString("description", null);
+            LocalDateTime doneAt = LocalDateTime.parse(json.optString("doneAt", null));
+
+            return workoutController.saveWorkout(athleteId, workoutType, description, doneAt);
+        });
     }
 
-    public String route(String path, String method, String body, Map<String, String> headers) throws JSONException {
+    public String route(String path, String method, String body, Map<String, String> headers) throws JSONException, UnsupportedEncodingException {
         synchronized (lock) {
             String staticKey = method + " " + path;
             if (staticRoutes.containsKey(staticKey)) {
