@@ -1,15 +1,17 @@
 package com.athletetrack.entity;
 
-public class UserWorkoutEntity {
+import java.util.List;
+
+public class WorkoutTypeEntity {
 
     private Long id;
     private Long userId;
-    private String workoutTypes;
+    private List<String> workoutTypes;
 
-    public UserWorkoutEntity() {
+    public WorkoutTypeEntity() {
     }
 
-    public UserWorkoutEntity(Long id, Long userId, String workoutTypes) {
+    public WorkoutTypeEntity(Long id, Long userId, List<String> workoutTypes) {
         this.id = id;
         this.userId = userId;
         this.workoutTypes = workoutTypes;
@@ -31,20 +33,20 @@ public class UserWorkoutEntity {
         this.userId = userId;
     }
 
-    public String getWorkoutTypes() {
+    public List<String> getWorkoutTypes() {
         return workoutTypes;
     }
 
-    public void setWorkoutTypes(String workoutTypes) {
+    public void setWorkoutTypes(List<String> workoutTypes) {
         this.workoutTypes = workoutTypes;
     }
 
     @Override
     public String toString() {
-        return "UserWorkoutEntity{" +
+        return "WorkoutTypeEntity{" +
                 "id=" + id +
                 ", userId=" + userId +
-                ", workoutTypes='" + workoutTypes + '\'' +
+                ", workoutTypes=" + workoutTypes +
                 '}';
     }
 }

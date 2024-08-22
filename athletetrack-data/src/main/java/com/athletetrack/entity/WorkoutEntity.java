@@ -1,24 +1,25 @@
 package com.athletetrack.entity;
 
 import java.time.Instant;
+import java.time.ZonedDateTime;
 
 public class WorkoutEntity {
 
     private Long id;
     private Long athleteId;
-    private String description;
-    private Instant doneAt;
     private String workoutType;
+    private String description;
+    private ZonedDateTime doneAt;
 
     public WorkoutEntity() {
     }
 
-    public WorkoutEntity(Long id, Long athleteId, String description, Instant doneAt, String workoutType) {
+    public WorkoutEntity(Long id, Long athleteId, String workoutType, String description, ZonedDateTime doneAt) {
         this.id = id;
         this.athleteId = athleteId;
+        this.workoutType = workoutType;
         this.description = description;
         this.doneAt = doneAt;
-        this.workoutType = workoutType;
     }
 
     public Long getId() {
@@ -37,22 +38,6 @@ public class WorkoutEntity {
         this.athleteId = athleteId;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Instant getDoneAt() {
-        return doneAt;
-    }
-
-    public void setDoneAt(Instant doneAt) {
-        this.doneAt = doneAt;
-    }
-
     public String getWorkoutType() {
         return workoutType;
     }
@@ -61,14 +46,30 @@ public class WorkoutEntity {
         this.workoutType = workoutType;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public ZonedDateTime getDoneAt() {
+        return doneAt;
+    }
+
+    public void setDoneAt(ZonedDateTime doneAt) {
+        this.doneAt = doneAt;
+    }
+
     @Override
     public String toString() {
         return "WorkoutEntity{" +
                 "id=" + id +
                 ", athleteId=" + athleteId +
+                ", workoutType='" + workoutType + '\'' +
                 ", description='" + description + '\'' +
                 ", doneAt=" + doneAt +
-                ", workoutType='" + workoutType + '\'' +
                 '}';
     }
 }
