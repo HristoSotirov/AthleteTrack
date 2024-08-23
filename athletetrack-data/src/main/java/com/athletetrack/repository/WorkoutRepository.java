@@ -4,6 +4,7 @@ import com.athletetrack.entity.UserEntity;
 import com.athletetrack.entity.WorkoutEntity;
 
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -25,15 +26,20 @@ public class WorkoutRepository {
         );
     }
 
-    public List<WorkoutEntity> getWorkoutsByUserId(Long userId) throws SQLException {
+    public List<WorkoutEntity> getWorkoutsByUserId(Long userId, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
         List<WorkoutEntity> workouts = new ArrayList<>();
 
-        String query = "SELECT * FROM workouts WHERE athlete_id = ?";
+        String query = "SELECT * FROM workouts "+
+                "WHERE athlete_id = ? AND done_at BETWEEN ? AND ? " +
+                "ORDER BY athlete_id, done_at";
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setLong(1, userId);
+            preparedStatement.setTimestamp(2, Timestamp.valueOf(startDate));
+            preparedStatement.setTimestamp(3, Timestamp.valueOf(endDate));
+
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
@@ -46,15 +52,20 @@ public class WorkoutRepository {
         return workouts;
     }
 
-    public List<WorkoutEntity> getWorkoutsByCoachId(Long coachId) throws SQLException {
+    public List<WorkoutEntity> getWorkoutsByCoachId(Long coachId, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
         List<WorkoutEntity> workouts = new ArrayList<>();
 
-        String query = "SELECT w.* FROM workouts w JOIN users u ON w.athlete_id = u.id WHERE u.coach_id = ? ORDER BY w.athlete_id, w.done_at";
+        String query = "SELECT w.* FROM workouts w JOIN users u ON w.athlete_id = u.id " +
+                "WHERE u.coach_id = ? AND w.done_at BETWEEN ? AND ? " +
+                "ORDER BY w.athlete_id, w.done_at";
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setLong(1, coachId);
+            preparedStatement.setTimestamp(2, Timestamp.valueOf(startDate));
+            preparedStatement.setTimestamp(3, Timestamp.valueOf(endDate));
+
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
@@ -66,15 +77,22 @@ public class WorkoutRepository {
         return workouts;
     }
 
-    public List<WorkoutEntity> getWorkoutsByClubName(String clubName) throws SQLException {
+
+    public List<WorkoutEntity> getWorkoutsByClubName(String clubName, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
         List<WorkoutEntity> workouts = new ArrayList<>();
 
-        String query = "SELECT w.* FROM workouts w JOIN users u ON w.athlete_id = u.id WHERE u.club = ? ORDER BY w.athlete_id, w.done_at";
+        String query = "SELECT w.* FROM workouts w JOIN users u ON w.athlete_id = u.id " +
+                "WHERE u.club = ? AND w.done_at BETWEEN ? AND ? " +
+                "ORDER BY w.athlete_id, w.done_at";
+
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
             preparedStatement.setString(1, clubName);
+            preparedStatement.setTimestamp(2, Timestamp.valueOf(startDate));
+            preparedStatement.setTimestamp(3, Timestamp.valueOf(endDate));
+
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {

@@ -8,6 +8,7 @@ import com.athletetrack.repository.WorkoutRepository;
 import com.athletetrack.security.PasswordUtils;
 
 import java.sql.SQLException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,8 +30,8 @@ public class WorkoutService {
         );
     }
 
-    public List<WorkoutDTO> getWorkoutsByUserId(Long userId) throws SQLException {
-        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByUserId(userId);
+    public List<WorkoutDTO> getWorkoutsByUserId(Long userId, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
+        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByUserId(userId, startDate, endDate);
         List<WorkoutDTO> workoutDTOs = new ArrayList<>();
 
         for (WorkoutEntity workout : workouts) {
@@ -41,8 +42,8 @@ public class WorkoutService {
         return workoutDTOs;
     }
 
-    public List<WorkoutDTO> getWorkoutsByCoachId(Long coachId) throws SQLException {
-        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByCoachId(coachId);
+    public List<WorkoutDTO> getWorkoutsByCoachId(Long coachId, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
+        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByCoachId(coachId, startDate, endDate);
         List<WorkoutDTO> workoutDTOs = new ArrayList<>();
 
         for (WorkoutEntity workout : workouts) {
@@ -53,8 +54,8 @@ public class WorkoutService {
         return workoutDTOs;
     }
 
-    public List<WorkoutDTO> getWorkoutsByClubName(String clubName) throws SQLException {
-        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByClubName(clubName);
+    public List<WorkoutDTO> getWorkoutsByClubName(String clubName, LocalDateTime startDate, LocalDateTime endDate) throws SQLException {
+        List<WorkoutEntity> workouts = workoutRepository.getWorkoutsByClubName(clubName, startDate, endDate);
         List<WorkoutDTO> workoutDTOs = new ArrayList<>();
 
         for (WorkoutEntity workout : workouts) {

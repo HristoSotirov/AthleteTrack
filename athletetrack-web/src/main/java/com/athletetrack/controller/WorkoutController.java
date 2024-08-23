@@ -22,9 +22,9 @@ public class WorkoutController {
         this.objectMapper.configure(com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
     }
 
-    public String getWorkoutsByUserId(String id) {
+    public String getWorkoutsByUserId(String id, LocalDateTime startDate, LocalDateTime endDate) {
         try {
-            List<WorkoutDTO> workouts = workoutService.getWorkoutsByUserId(Long.parseLong(id));
+            List<WorkoutDTO> workouts = workoutService.getWorkoutsByUserId(Long.parseLong(id), startDate, endDate);
             return "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + objectMapper.writeValueAsString(workouts);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -35,9 +35,9 @@ public class WorkoutController {
         }
     }
 
-    public String getWorkoutsByCoachId(String coachId) {
+    public String getWorkoutsByCoachId(String coachId, LocalDateTime startDate, LocalDateTime endDate) {
         try {
-            List<WorkoutDTO> workouts = workoutService.getWorkoutsByCoachId(Long.parseLong(coachId));
+            List<WorkoutDTO> workouts = workoutService.getWorkoutsByCoachId(Long.parseLong(coachId), startDate, endDate);
             return "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + objectMapper.writeValueAsString(workouts);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -48,9 +48,9 @@ public class WorkoutController {
         }
     }
 
-    public String getWorkoutsByClubName(String clubName) {
+    public String getWorkoutsByClubName(String clubName, LocalDateTime startDate, LocalDateTime endDate) {
         try {
-            List<WorkoutDTO> workouts = workoutService.getWorkoutsByClubName(clubName);
+            List<WorkoutDTO> workouts = workoutService.getWorkoutsByClubName(clubName, startDate, endDate);
             return "HTTP/1.1 200 OK\r\nContent-Type: application/json\r\n\r\n" + objectMapper.writeValueAsString(workouts);
         } catch (SQLException e) {
             e.printStackTrace();

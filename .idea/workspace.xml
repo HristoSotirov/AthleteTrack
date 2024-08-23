@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="user registration, user login, user JWT token">
+    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="workout methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/WorkoutEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/WorkoutEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/entity/WorkoutTypeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/WorkoutRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/WorkoutRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/target/classes/com/athletetrack/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-security/target/classes/com/athletetrack/jwtToken/JwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-security/target/classes/com/athletetrack/jwtToken/JwtFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/DTO/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/DTO/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/DTO/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/DTO/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/target/classes/com/athletetrack/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/WorkoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/WorkoutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/WorkoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/WorkoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/web/RequestHandler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724334789232</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="workout methods">
+      <option name="closed" value="true" />
+      <created>1724362646157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724362646157</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="server build, user visualization methods" />
     <MESSAGE value="user registration, user login, user JWT token" />
-    <option name="LAST_COMMIT_MESSAGE" value="user registration, user login, user JWT token" />
+    <MESSAGE value="workout methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="workout methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

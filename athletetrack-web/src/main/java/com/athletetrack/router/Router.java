@@ -80,21 +80,37 @@ public class Router {
             return userController.login(username, password);
         });
 
-        registerRoute("GET", "/workoutsAthlete/{athlete_id}", request -> {
-            String athleteId = request.getPathVariables().get("athlete_id");
-            return workoutController.getWorkoutsByUserId(athleteId);
+        registerRoute("POST", "/workoutsAthlete", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            String athleteId = json.optString("athleteId", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return workoutController.getWorkoutsByUserId(athleteId, startDate, endDate);
         });
 
-        registerRoute("GET", "/workoutsCoach/{coach_id}", request -> {
-            String coachId = request.getPathVariables().get("coach_id");
-            return workoutController.getWorkoutsByCoachId(coachId);
+        registerRoute("POST", "/workoutsCoach", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            String coachId = json.optString("coachId", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return workoutController.getWorkoutsByCoachId(coachId, startDate, endDate);
         });
 
-        registerRoute("GET", "/workoutsClub/{clubName}", request -> {
-            String encodedClubName = request.getPathVariables().get("clubName");
-            String clubName = URLDecoder.decode(encodedClubName, StandardCharsets.UTF_8.toString());
+        registerRoute("POST", "/workoutsClub", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
 
-            return workoutController.getWorkoutsByClubName(clubName);
+            String clubName = json.optString("clubName", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return workoutController.getWorkoutsByClubName(clubName, startDate, endDate);
         });
 
         registerRoute("POST", "/saveWorkout", request -> {
