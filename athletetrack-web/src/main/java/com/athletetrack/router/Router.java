@@ -1,9 +1,12 @@
 package com.athletetrack.router;
 
+import com.athletetrack.controller.AnalysisController;
 import com.athletetrack.controller.UserController;
 import com.athletetrack.controller.WorkoutController;
+import com.athletetrack.repository.AnalysisRepository;
 import com.athletetrack.repository.UserRepository;
 import com.athletetrack.repository.WorkoutRepository;
+import com.athletetrack.service.AnalysisService;
 import com.athletetrack.service.UserService;
 import com.athletetrack.service.WorkoutService;
 import org.json.JSONException;
@@ -33,6 +36,10 @@ public class Router {
         WorkoutRepository workoutRepository = new WorkoutRepository();
         WorkoutService workoutService = new WorkoutService(workoutRepository);
         WorkoutController workoutController = new WorkoutController(workoutService);
+
+        AnalysisRepository analysisRepository = new AnalysisRepository();
+        AnalysisService analysisService = new AnalysisService(analysisRepository);
+        AnalysisController analysisController = new AnalysisController(analysisService);
 
         registerRoute("GET", "/users", request -> userController.getAllUsers());
 
@@ -123,6 +130,39 @@ public class Router {
             LocalDateTime doneAt = LocalDateTime.parse(json.optString("doneAt", null));
 
             return workoutController.saveWorkout(athleteId, workoutType, description, doneAt);
+        });
+
+        registerRoute("POST", "/analysisAthlete", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            String athleteId = json.optString("athleteId", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return analysisController.getAnalysisForAthlete(athleteId, startDate, endDate);
+        });
+
+        registerRoute("POST", "/analysisCoach", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            String coachId = json.optString("coachId", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return analysisController.getAnalysisByCoach(coachId, startDate, endDate);
+        });
+
+        registerRoute("POST", "/analysisClub", request -> {
+            String requestBody = request.getBody();
+            JSONObject json = new JSONObject(requestBody);
+
+            String club = json.optString("clubName", null);
+            LocalDateTime startDate = LocalDateTime.parse(json.optString("startDate", null));
+            LocalDateTime endDate = LocalDateTime.parse(json.optString("endDate", null));
+
+            return analysisController.getAnalysisByClub(club, startDate, endDate);
         });
     }
 

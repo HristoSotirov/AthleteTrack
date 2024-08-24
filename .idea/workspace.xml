@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="workout methods">
+    <list default="true" id="3f0ce5e0-5dcf-453b-ba56-b49208c9adfc" name="Changes" comment="fix workout methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/WorkoutRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-data/src/main/java/com/athletetrack/repository/WorkoutRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/WorkoutService.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-service/src/main/java/com/athletetrack/service/WorkoutService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/WorkoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/controller/WorkoutController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/src/main/java/com/athletetrack/router/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" beforeDir="false" afterPath="$PROJECT_DIR$/athletetrack-web/target/classes/com/athletetrack/router/Router.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724362646157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix workout methods">
+      <option name="closed" value="true" />
+      <created>1724442890720</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724442890720</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -127,7 +133,8 @@
     <MESSAGE value="server build, user visualization methods" />
     <MESSAGE value="user registration, user login, user JWT token" />
     <MESSAGE value="workout methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="workout methods" />
+    <MESSAGE value="fix workout methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix workout methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
